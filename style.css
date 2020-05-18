@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100vh;
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+}
+
+#app {
+  width: 80%;
+  overflow: hidden;
+  margin: 0 auto;
+
+}
+
+
+#header h2 {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#header h4 {
+  margin-top: 2rem;
+}
+
+#header p {
+  text-indent: 2rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+#mid {
+  margin-top: 4rem;
+  width: 100%;
+}
+
+.radio {
+  width: 99%;
+  border: 0.1rem solid #000;
+  border-radius: 0.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.radio p:first-child {
+  background-color: #f5f5f5;
+  overflow: hidden;
+  font-size: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.radio p {
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}
+
+.radio select {
+  height: 4rem;
+  width: 100%;
+  padding-left: 2rem;
+  font-size: 2rem;
+}
+
+.text {
+  width: 99%;
+
+}
+
+.text p {
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  font-size: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.text textarea {
+  width: 95%;
+  margin-top: 0.5rem;
+  height: 10rem;
+  text-indent: 2rem;
+  font-size: 2.5rem;
+  vertical-align: top;
+}
+
+#mid input[type="submit"] {
+  background-color: #d81e1f;
+  width: 8rem;
+  height: 3rem;
+  line-height: 3rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+  font-size: 2rem;
+  outline: 0;
+}
+
+.isshow{
+ margin-left: 2rem;
+ color: red;
+ display: none;
+
+}
+
+
+input[required]:invalid,
+input:focus:invalid,
+textarea[required]:invalid,
+textarea:focus:invalid {
+  box-shadow: none;
+}
+

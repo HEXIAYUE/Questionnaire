@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>毕业调查问卷</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="app">
+    <div id="header">
+      <h2>长江大学2020届毕业生思想状况调查问卷</h2>
+      <h4>亲爱的2020届毕业生：</h4>
+      <p>你们好！再过一个月，你们就将大学毕业，迈向新的人生旅程。为了全面、深入、准确地了
+        解你们的所思、所想、所需、所求，以便我们更有成效地开展大学生思想政治工作，我们设计
+        了本问卷，希望得到你的支持！</p>
+      <p>本问卷用于对我们改进学生思政工作而进行的数据统计
+        分析，不会给你个人带来任何不利影响。请根据自身真实状况，于2019年6月10日前完成填写。非常感
+        谢你的支持与合作！</p>
+      <p><b>（请扫码完成问卷）</b></p>
+      <p>长江大学党委宣传部
+        2020年5月20日
+      </p>
+    </div>
+    <div id="mid">
+      <form action="post.php" method="post" target="_blank" onsubmit="return Submit()">
+        <!--btn[]为所有input的数据-->
+        <h3>一、个人基本信息</h3>
+        <div class="radio">
+          <p>1.你的性别是</p>
+          <p><input type="radio" name="btn[0]" value="男" id="sex1" required="required" />
+            <label for="sex1">A.男</label></p>
+          <p><input type="radio" name="btn[0]" value="女" id="sex2" required="required" />
+            <label for="sex2">B.女</label></p>
+        </div>
+        <div class="radio">
+          <p>2. 你的政治面貌是</p>
+          <p><input type="radio" name="btn[1]" value="中共党员" id="political1" required="required" />
+            <label for="political1">A.中共党员</label></p>
+          <p><input type="radio" name="btn[1]" value="共青团员" id="political2" required="required" />
+            <label for="political2">B.共青团员</label></p>
+          <p><input type="radio" name="btn[1]" value="群众" id="political3" required="required" />
+            <label for="political3">C.群众</label></p>
+        </div>
+        <div class="radio">
+          <p>3. 你所在的校区是</p>
+          <p><input type="radio" name="btn[2]" value="东校区" id="school1" required="required" />
+            <label for="school1">A.东校区</label></p>
+          <p><input type="radio" name="btn[2]" value="西校区" id="school2" required="required" />
+            <label for="school2">B.西校区</label></p>
+          <p><input type="radio" name="btn[2]" value="武汉校区" id="school3" required="required" />
+            <label for="school3">C.武汉校区</label></p>
+          <p><input type="radio" name="btn[2]" value="沙市校区" id="school4" required="required" />
+            <label for="school4">D.沙市校区</label></p>
+        </div>
+        <div class="radio">
+          <p>4.你的专业类型是</p>
+          <p><input type="radio" name="btn[3]" value="文科" id="profession1" required="required" />
+            <label for="profession1">A.文科</label></p>
+          <p><input type="radio" name="btn[3]" value="工科" id="profession2" required="required" />
+            <label for="profession2">B.工科</label></p>
+          <p><input type="radio" name="btn[3]" value="理科" id="profession3" required="required" />
+            <label for="profession3">C.理科</label></p>
+        </div>
+        <div class="radio">
+          <p>5．5．你来自（ ）省（自治区、直辖市）</p>
+          <select id="pro" name="btn[4]" required="required">
+            <option value="">-请选择-</option>
+            <option>北京市</option>
+            <option>上海市</option>
+            <option>天津市</option>
+            <option>重庆市</option>
+            <option>河北省</option>
+            <option>山西省</option>
+            <option>内蒙古自治区</option>
+            <option>辽宁省</option>
+            <option>吉林省</option>
+            <option>黑龙江省</option>
+            <option>江苏省</option>
+            <option>浙江省</option>
+            <option>安徽省</option>
+            <option>福建省</option>
+            <option>江西省</option>
+            <option>山东省</option>
+            <option>河南省</option>
+            <option>湖北省</option>
+            <option>湖南省</option>
+            <option>广东省</option>
+            <option>广西壮族自治区</option>
+            <option>海南省</option>
+            <option>四川省</option>
+            <option>贵州省</option>
+            <option>云南省</option>
+            <option>西藏自治区</option>
+            <option>陕西省</option>
+            <option>甘肃省</option>
+            <option>宁夏回族自治区</option>
+            <option>青海省</option>
+            <option>新疆维吾尔族自治区</option>
+            <option>香港特别行政区</option>
+            <option>澳门特别行政区</option>
+            <option>台湾省</option>
+            <option>其它</option>
+          </select>
+        </div>
+        <div class="radio">
+          <p>6．你选择就读于长江大学，是因为</p>
+          <p><input type="radio" name="btn[5]" value="来自网络宣传" id="reason1" required="required" />
+            <label for="reason1">A.来自网络宣传</label></p>
+          <p><input type="radio" name="btn[5]" value="学校招生宣传" id="reason2" required="required" />
+            <label for="reason2">B.学校招生宣传</label></p>
+          <p><input type="radio" name="btn[5]" value="高中班主任老师推介" id="reason3" required="required" />
+            <label for="reason3">C.高中班主任老师推介</label></p>
+          <p><input type="radio" name="btn[5]" value="亲朋好友的推介" id="reason4" required="required" />
+            <label for="reason4">D.亲朋好友的推介</label></p>
+          <p><input type="radio" name="btn[5]" value="学校本身的社会影响和办学实力" id="reason5" required="required" />
+            <label for="reason5">E.学校本身的社会影响和办学实力</label></p>
+          <p><input type="radio" name="btn[5]" value="考分刚够本校录取线" id="reason6" required="required" />
+            <label for="reason6">F.考分刚够本校录取线</label></p>
+          <p><input type="radio" name="btn[5]" value="其他原因" id="reason7" required="required" />
+            <label for="reason7">G.其他原因</label></p>
+        </div>
+
+
+        <h3>二、选择题</h3>
+        <div class="radio">
+          <p>Q1：你的信仰最倾向于</p>
+          <p><input type="radio" name="btn[6]" value="共产主义" id="faith1" required="required" />
+            <label   for="faith1">A.共产主义</label></p>
+          <p><input type="radio" name="btn[6]" value="集体主义" id="faith2" required="required" />
+            <label for="faith2">B.集体主义</label></p>
+          <p><input type="radio" name="btn[6]" value="理想主义" id="faith3" required="required" />
+            <label for="faith3">C.理想主义</label></p>
+          <p><input type="radio" name="btn[6]" value="科学" id="faith4" required="required" />
+            <label for="faith4">D.科学</label></p>
+          <p><input type="radio" name="btn[6]" value="实用主义" id="faith5" required="required" />
+            <label for="faith5">E.实用主义</label></p>
+          <p><input type="radio" name="btn[6]" value="个人主义" id="faith6" required="required" />
+            <label for="faith6">F.个人主义</label></p>
+        </div>
+        <div class="radio">
+          <p>Q2：你认为对你的信仰形成影响最大的是（可多选）</p>
+          <p><input type="checkbox" name="btn[7][]" value="书籍" id="influences1" />
+            <label for="influences1">A.书籍</label>
+          <span id="show1" class="isshow">复选框请至少填一项</span>
+          </p>
+          <p><input type="checkbox" name="btn[7][]" value="网络和大众传媒" id="influences2" />
+            <label for="influences2">B.网络和大众传媒</label></p>
+          <p><input type="checkbox" name="btn[7][]" value="老师和学校教育" id="influences3" />
+            <label for="influences3">C.老师和学校教育</label></p>
+          <p><input type="checkbox" name="btn[7][]" value="社会环境" id="influences4" />
+            <label for="influences4">D.社会环境</label></p>
+          <p><input type="checkbox" name="btn[7][]" value="朋友" id="influences5" />
+            <label for="influences5">E.朋友</label></p>
+          <p><input type="checkbox" name="btn[7][]" value="家庭" id="influences6" />
+            <label for="influences6">F.家庭</label></p>
+          <p><input type="checkbox" name="btn[7][]" value="说不清楚" id="influences7" />
+            <label for="influences7">G.说不清楚</label></p>
+        </div>
+        <div class="radio">
+          <p>Q3：更能左右你的人生理想和价值追求的是</p>
+          <p><input type="radio" name="btn[8]" value="科学技术进步与发展" id="about1" required="required" />
+            <label for="about1">A.科学技术进步与发展</label></p>
+          <p><input type="radio" name="btn[8]" value="物价或房价" id="about2" required="required" />
+            <label for="about2">B.物价或房价</label></p>
+          <p><input type="radio" name="btn[8]" value="崇高的理想" id="about3" required="required" />
+            <label for="about3">C.崇高的理想</label></p>
+          <p><input type="radio" name="btn[8]" value="没考虑过这个问题" id="about4" required="required" />
+            <label for="about4">D.没考虑过这个问题</label></p>
+          <p><input type="radio" name="btn[8]" value="其他原因" id="about5" required="required" />
+            <label for="about5">E.其他原因</label></p>
+        </div>
+        <div class="radio">
+          <p>Q4：社会主义核心价值观的主要内容是</p>
+          <p><input type="radio" name="btn[9]" value="爱国主义、集体主义、社会主" id="socialist1" required="required" />
+            <label for="socialist1">A.爱国主义、集体主义、社会主义</label></p>
+          <p><input type="radio" name="btn[9]" value="富强、民主、文明、和谐，自由、平等、公正、法治，爱国、敬业、诚信、友善" id="socialist2"
+              required="required" />
+            <label for="socialist2">B.富强、民主、文明、和谐，自由、平等、公正、法治，爱国、敬业、诚信、友善</label></p>
+          <p><input type="radio" name="btn[9]" value="社会公德、职业道德、家庭美德" id="socialist3" required="required" />
+            <label for="socialist3">C.社会公德、职业道德、家庭美德</label></p>
+          <p><input type="radio" name="btn[9]" value="国家富强、民族振兴、人民幸福" id="socialist4" required="required" />
+            <label for="socialist4">D.国家富强、民族振兴、人民幸福</label></p>
+        </div>
+        <div class="radio">
+          <p>Q5："四个全面"是指（多选）</p>
+          <p><input type="checkbox" name="btn[10][]" value="全面建成小康社会" id="four1" />
+            <label for="four1">A.全面建成小康社会</label>
+          <span  id="show2" class="isshow">复选框请至少填一项</span></p>
+          <p><input type="checkbox" name="btn[10][]" value="全面深化改革" id="four2" />
+            <label for="four2">B.全面深化改革</label></p>
+          <p><input type="checkbox" name="btn[10][]" value="全面依法治国" id="four3" />
+            <label for="four3">C.全面依法治国</label></p>
+          <p><input type="checkbox" name="btn[10][]" value="全面从严治党" id="four4" />
+            <label for="four4">D.全面从严治党</label></p>
+          <p><input type="checkbox" name="btn[10][]" value="全面生态保护" id="four5" />
+            <label for="four5">E.全面生态保护</label></p>
+          <p><input type="checkbox" name="btn[10][]" value="全面发展经济" id="four6" />
+            <label for="four6">F.全面发展经济</label></p>
+        </div>
+        <div class="radio">
+          <p>Q6：你觉得当前的新冠肺炎疫情对你的学习和就业</p>
+          <p><input type="radio" name="btn[11]" value="影响非常大" id="learn1" required="required" />
+            <label for="learn1">A.影响非常大</label></p>
+          <p><input type="radio" name="btn[11]" value="有一定影响" id="learn2" required="required" />
+            <label for="learn2">B.有一定影响</label></p>
+          <p><input type="radio" name="btn[11]" value="影响不大" id="learn3" required="required" />
+            <label for="learn3">C.影响不大</label></p>
+        </div>
+        <div class="radio">
+          <p>Q7：你对抗击新冠肺炎疫情所做出的贡献有(可多选)</p>
+          <p><input type="checkbox" name="btn[12][]" value="自主居家隔离" id="contribution1" />
+            <label for="contribution1">A.自主居家隔离</label>
+          <span  id="show3" class="isshow">复选框请至少填一项</span></p>
+          <p><input type="checkbox" name="btn[12][]" value="参与志愿活动" id="contribution2" />
+            <label for="contribution2">B.参与志愿活动</label></p>
+          <p><input type="checkbox" name="btn[12][]" value="参与捐款/捐赠物资" id="contribution3" />
+            <label for="contribution3">C.参与捐款/捐赠物资</label></p>
+          <p><input type="checkbox" name="btn[12][]" value="前往抗疫前线" id="contribution4" />
+            <label for="contribution4">D.前往抗疫前线</label></p>
+          <p><input type="checkbox" name="btn[12][]" value="参与基层防疫工作" id="contribution5" />
+            <label for="contribution5">E.参与基层防疫工作</label></p>
+          <p><input type="checkbox" name="btn[12][]" value="其他" id="contribution6" />
+            <label for="contribution6">F.其他</label></p>
+        </div>
+        <div class="radio">
+          <p>Q8：你对“中国的发展前途”总体看法是</p>
+          <p><input type="radio" name="btn[13]" value="非常乐观" id="view1" required="required" />
+            <label for="view1">A.非常乐观</label></p>
+          <p><input type="radio" name="btn[13]" value="比较乐观" id="view2" required="required" />
+            <label for="view2">B.比较乐观</label></p>
+          <p><input type="radio" name="btn[13]" value="比较悲观" id="view3" required="required" />
+            <label for="view3">C.比较悲观</label></p>
+          <p><input type="radio" name="btn[13]" value="说不清楚" id="view4" required="required" />
+            <label for="view4">D.说不清楚</label></p>
+        </div>
+        <div class="radio">
+          <p>Q9：在当前制约中国发展的各种问题中，你认为最能影响其可持续发展的是</p>
+          <p><input type="radio" name="btn[14]" value="劳动就业" id="problem1" required="required" />
+            <label for="problem1">A.劳动就业</label></p>
+          <p><input type="radio" name="btn[14]" value="物价房价" id="problem2" required="required" />
+            <label for="problem2">B.物价房价</label></p>
+          <p><input type="radio" name="btn[14]" value="医疗卫生" id="problem3" required="required" />
+            <label for="problem3">C.医疗卫生</label></p>
+          <p><input type="radio" name="btn[14]" value="教育公平" id="problem4" required="required" />
+            <label for="problem4">D.教育公平</label></p>
+          <p><input type="radio" name="btn[14]" value="食品安全" id="problem5" required="required" />
+            <label for="problem5">E.食品安全</label></p>
+          <p><input type="radio" name="btn[14]" value="收入分配" id="problem6" required="required" />
+            <label for="problem6">F.收入分配</label></p>
+          <p><input type="radio" name="btn[14]" value="环保治安" id="problem7" required="required" />
+            <label for="problem7">G.环保治安</label></p>
+          <p><input type="radio" name="btn[14]" value="腐败问题" id="problem8" required="required" />
+            <label for="problem8">H.腐败问题</label></p>
+          <p><input type="radio" name="btn[14]" value="科技水平" id="problem9" required="required" />
+            <label for="problem9">I.科技水平</label></p>
+        </div>
+        <div class="radio">
+          <p>Q10：你认为自己的人生追求和国家发展的关系是</p>
+          <p><input type="radio" name="btn[15]" value="服务于国家富强、民族振兴和人民幸福是自己毕生的追求" id="relationship1"
+              required="required" />
+            <label for="relationship1">A.服务于国家富强、民族振兴和人民幸福是自己毕生的追求</label></p>
+          <p><input type="radio" name="btn[15]" value="总是密切了解国家发展动向，并想把自己的前途和国家的发展联系起来" id="relationship2"
+              required="required" />
+            <label for="relationship2">B.总是密切了解国家发展动向，并想把自己的前途和国家的发展联系起来</label></p>
+          <p><input type="radio" name="btn[15]" value="有时会将自己的前途和国家的发展联系起来" id="relationship3" required="required" />
+            <label for="relationship3">C.有时会将自己的前途和国家的发展联系起来</label></p>
+          <p><input type="radio" name="btn[15]" value="国家发展话题太大，就是想干好自己的本职工作就可以了" id="relationship4"
+              required="required" />
+            <label for="relationship4">D.国家发展话题太大，就是想干好自己的本职工作就可以了</label></p>
+        </div>
+        <div class="radio">
+          <p>Q11：你对自己所学习的专业的态度是</p>
+          <p><input type="radio" name="btn[16]" value="很喜欢" id="like1" required="required" />
+            <label for="like1">A.很喜欢</label></p>
+          <p><input type="radio" name="btn[16]" value="喜欢" id="like2" required="required" />
+            <label for="like2">B.喜欢</label></p>
+          <p><input type="radio" name="btn[16]" value="一般" id="like3" required="required" />
+            <label for="like3">C.一般</label></p>
+          <p><input type="radio" name="btn[16]" value="不喜欢" id="like4" required="required" />
+            <label for="like4">D.不喜欢</label></p>
+        </div>
+        <div class="radio">
+          <p>Q12：你认为影响自己今后事业成功的最主要因素是</p>
+          <p><input type="radio" name="btn[17]" value="成绩" id="success1" required="required" />
+            <label for="success1">A.成绩</label></p>
+          <p><input type="radio" name="btn[17]" value="专业" id="success2" required="required" />
+            <label for="success2">B.专业</label></p>
+          <p><input type="radio" name="btn[17]" value="特长" id="success3" required="required" />
+            <label for="success3">C.特长</label></p>
+          <p><input type="radio" name="btn[17]" value="学历" id="success4" required="required" />
+            <label for="success4">D.学历</label></p>
+          <p><input type="radio" name="btn[17]" value="能力" id="success5" required="required" />
+            <label for="success5">E.能力</label></p>
+          <p><input type="radio" name="btn[17]" value="人脉" id="success6" required="required" />
+            <label for="success6">F.人脉</label></p>
+          <p><input type="radio" name="btn[17]" value="其他因素" id="success7" required="required" />
+            <label for="success7">G.其他因素</label></p>
+        </div>
+        <div class="radio">
+          <p>Q13：你对自己今后所要从事的职业</p>
+          <p><input type="radio" name="btn[18]" value="非常了解" id="occupation1" required="required" />
+            <label for="occupation1">A.非常了解</label></p>
+          <p><input type="radio" name="btn[18]" value="了解" id="occupation2" required="required" />
+            <label for="occupation2">B.了解</label></p>
+          <p><input type="radio" name="btn[18]" value="不太了解" id="occupation3" required="required" />
+            <label for="occupation3">C.不太了解</label></p>
+          <p><input type="radio" name="btn[18]" value="完全不了解" id="occupation4" required="required" />
+            <label for="occupation4">D.完全不了解</label></p>
+        </div>
+        <div class="radio">
+          <p>Q14：你就业的主要目的是</p>
+          <p><input type="radio" name="btn[19]" value="为社会发展做贡献" id="employment1" required="required" />
+            <label for="employment1">A.为社会发展做贡献</label></p>
+          <p><input type="radio" name="btn[19]" value="为实现自己的人生目标" id="employment2" required="required" />
+            <label for="employment2">B.为实现自己的人生目标</label></p>
+          <p><input type="radio" name="btn[19]" value="为满足自我的生存需要" id="employment3" required="required" />
+            <label for="employment3">C.为满足自我的生存需要</label></p>
+          <p><input type="radio" name="btn[19]" value="其他" id="employment4" required="required" />
+            <label for="employment4">D.其他</label></p>
+        </div>
+        <div class="radio">
+          <p>Q15：你对自己所签约的工作最看重的是</p>
+          <p><input type="radio" name="btn[20]" value="发展空间" id="contract1" required="required" />
+            <label for="contract1">A.发展空间</label></p>
+          <p><input type="radio" name="btn[20]" value="薪水、福利待遇" id="contract2" required="required" />
+            <label for="contract2">B.薪水、福利待遇</label></p>
+          <p><input type="radio" name="btn[20]" value="工作稳定" id="contract3" required="required" />
+            <label for="contract3">C.工作稳定</label></p>
+          <p><input type="radio" name="btn[20]" value="工作环境" id="contract4" required="required" />
+            <label for="contract4">D.工作环境</label></p>
+          <p><input type="radio" name="btn[20]" value="行业或工作喜好" id="contract5" required="required" />
+            <label for="contract5">E.行业或工作喜好</label></p>
+          <p><input type="radio" name="btn[20]" value="所在地域" id="contract6" required="required" />
+            <label for="contract6">F.所在地域</label></p>
+          <p><input type="radio" name="btn[20]" value="其他因素" id="contract7" required="required" />
+            <label for="contract7">G.其他因素</label></p>
+        </div>
+        <div class="radio">
+          <p>Q16: 你觉得目前最好的毕业去向是</p>
+          <p><input type="radio" name="btn[21]" value="考研" id="graduation1" required="required" />
+            <label for="graduation1">A.考研</label></p>
+          <p><input type="radio" name="btn[21]" value="自主创业" id="graduation2" required="required" />
+            <label for="graduation2">B.自主创业</label></p>
+          <p><input type="radio" name="btn[21]" value="考公务员" id="graduation3" required="required" />
+            <label for="graduation3">C.考公务员</label></p>
+          <p><input type="radio" name="btn[21]" value="找工作" id="graduation4" required="required" />
+            <label for="graduation4">D.找工作</label></p>
+          <p><input type="radio" name="btn[21]" value="暂不就业" id="graduation5" required="required" />
+            <label for="graduation5">E.暂不就业</label></p>
+        </div>
+        <div class="radio">
+          <p>Q17：在大学生涯中，你提升自己的精神品位或人文素养主要通过（可多选）</p>
+          <p><input type="checkbox" name="btn[22][]" value="抓住第一课堂，学好专业" id="humanities1" />
+            <label for="humanities1">A.抓住第一课堂，学好专业</label>
+          <span class="isshow"  id="show4">复选框请至少填一项</span></p>
+          <p><input type="checkbox" name="btn[22][]" value="参加学校组织的课外活动或学生社团活动" id="humanities2" />
+            <label for="humanities2">B.参加学校组织的课外活动或学生社团活动</label></p>
+          <p><input type="checkbox" name="btn[22][]" value="向老师学习" id="humanities3" />
+            <label for="humanities3">C.向老师学习</label></p>
+          <p><input type="checkbox" name="btn[22][]" value="积极参加社会公益活动" id="humanities4" />
+            <label for="humanities4">D.积极参加社会公益活动</label></p>
+          <p><input type="checkbox" name="btn[22][]" value="课外阅读" id="humanities5" />
+            <label for="humanities5">E.课外阅读</label></p>
+          <p><input type="checkbox" name="btn[22][]" value="其他途径" id="humanities6" />
+            <label for="humanities6">F.其他途径</label></p>
+        </div>
+        <div class="radio">
+          <p>Q18:你认为学校组织的学生课外活动</p>
+          <p><input type="radio" name="btn[23]" value="较多" id="activities1" required="required" />
+            <label for="activities1">A.较多</label></p>
+          <p><input type="radio" name="btn[23]" value="较少" id="activities2" required="required" />
+            <label for="activities2">B.较少</label></p>
+          <p><input type="radio" name="btn[23]" value="不了解" id="activities3" required="required" />
+            <label for="activities3">C.不了解</label></p>
+        </div>
+        <div class="radio">
+          <p>Q19：你认为学校组织的学生课外活动对自己的成长成才</p>
+          <p><input type="radio" name="btn[24]" value="有很大帮助" id="growing1" required="required" />
+            <label for="growing1">A.有很大帮助</label></p>
+          <p><input type="radio" name="btn[24]" value="有一定帮助" id="growing2" required="required" />
+            <label for="growing2">B.有一定帮助</label></p>
+          <p><input type="radio" name="btn[24]" value="帮助不大" id="growing3" required="required" />
+            <label for="growing3">C.帮助不大</label></p>
+        </div>
+        <div class="radio">
+          <p>Q20：你认为学校现在开设的思想政治理论课对自己了解国情民情</p>
+          <p><input type="radio" name="btn[25]" value="很有作用" id="conditions1" required="required" />
+            <label for="conditions1">A.很有作用</label></p>
+          <p><input type="radio" name="btn[25]" value="作用较大" id="conditions2" required="required" />
+            <label for="conditions2">B.作用较大</label></p>
+          <p><input type="radio" name="btn[25]" value="作用较小" id="conditions3" required="required" />
+            <label for="conditions3">C.作用较小</label></p>
+        </div>
+        <div class="radio">
+          <p>Q21：你对学校思想政治理论课教学的总体印象是</p>
+          <p><input type="radio" name="btn[26]" value="很好" id="impression1" required="required" />
+            <label for="impression1">A.很好</label></p>
+          <p><input type="radio" name="btn[26]" value="好" id="impression2" required="required" />
+            <label for="impression2">B.好</label></p>
+          <p><input type="radio" name="btn[26]" value="一般" id="impression3" required="required" />
+            <label for="impression3">C.一般</label></p>
+          <p><input type="radio" name="btn[26]" value="较差" id="impression4" required="required" />
+            <label for="impression4">D.较差</label></p>
+        </div>
+        <div class="radio">
+          <p>Q22：你对学校专业和课程设置的看法是</p>
+          <p><input type="radio" name="btn[27]" value="专业和课程设置很合理，很切合学生和社会的实际需要" id="course1" required="required" />
+            <label for="course1">A.专业和课程设置很合理，很切合学生和社会的实际需要</label></p>
+          <p><input type="radio" name="btn[27]" value="专业和课程设置较合理，比较切合学生和社会的实际需要" id="course2" required="required" />
+            <label for="course2">B.专业和课程设置较合理，比较切合学生和社会的实际需要</label></p>
+          <p><input type="radio" name="btn[27]" value="专业和课程设置不合理，与学生和社会的实际需要严重脱节" id="course3" required="required" />
+            <label for="course3">C.专业和课程设置不合理，与学生和社会的实际需要严重脱节</label></p>
+          <p><input type="radio" name="btn[27]" value="其他" id="course4" required="required" />
+            <label for="course4">D.其他</label></p>
+        </div>
+        <div class="radio">
+          <p>Q23：你对学校教师授课的总体评价是</p>
+          <p><input type="radio" name="btn[28]" value="学识广博，课程内容有深度、有趣味" id="teach1" required="required" />
+            <label for="teach1">A.学识广博，课程内容有深度、有趣味</label></p>
+          <p><input type="radio" name="btn[28]" value="学识一般，课程内容缺乏深度和趣味" id="teach2" required="required" />
+            <label for="teach2">B.学识一般，课程内容缺乏深度和趣味</label></p>
+          <p><input type="radio" name="btn[28]" value="学识较差，课程内容死板、无深度" id="teach3" required="required" />
+            <label for="teach3">C.学识较差，课程内容死板、无深度</label></p>
+          <p><input type="radio" name="btn[28]" value="其他" id="teach4" required="required" />
+            <label for="teach4">D.其他</label></p>
+        </div>
+        <div class="radio">
+          <p>Q24：你对学校管理岗位老师的总体评价是</p>
+          <p><input type="radio" name="btn[29]" value="工作认真负责，关心学生，很有亲和力" id="teacher1" required="required" />
+            <label for="teacher1">A.工作认真负责，关心学生，很有亲和力</label></p>
+          <p><input type="radio" name="btn[29]" value="工作较负责，比较关心学生，较有亲和力" id="teacher2" required="required" />
+            <label for="teacher2">B.工作较负责，比较关心学生，较有亲和力</label></p>
+          <p><input type="radio" name="btn[29]" value="工作不负责，对学生漠不关心，有一定的官僚主义作风" id="teacher3" required="required" />
+            <label for="teacher3">C.工作不负责，对学生漠不关心，有一定的官僚主义作风</label></p>
+          <p><input type="radio" name="btn[29]" value="其他" id="teacher4" required="required" />
+            <label for="teacher4">D.其他</label></p>
+        </div>
+        <div class="radio">
+          <p>Q25：你对学校后勤服务岗位老师的总体评价是</p>
+          <p><input type="radio" name="btn[30]" value="关心学生，服务意识很强" id="logistics1" required="required" />
+            <label for="logistics1">A.关心学生，服务意识很强</label></p>
+          <p><input type="radio" name="btn[30]" value="比较关心学生，服务意识较强" id="logistics2" required="required" />
+            <label for="logistics2">B.比较关心学生，服务意识较强</label></p>
+          <p><input type="radio" name="btn[30]" value="对学生漠不关心，有较大的距离感，服务态度差" id="logistics3" required="required" />
+            <label for="logistics3">C.对学生漠不关心，有较大的距离感，服务态度差</label></p>
+          <p><input type="radio" name="btn[30]" value="其他" id="logistics4" required="required" />
+            <label for="logistics4">D.其他</label></p>
+        </div>
+        <div class="radio">
+          <p>Q26：生活中遇到困难时，你首先想到的求助对象是</p>
+          <p><input type="radio" name="btn[31]" value="辅导员" id="helper1" required="required" />
+            <label for="helper1">A.辅导员</label></p>
+          <p><input type="radio" name="btn[31]" value="班主任" id="helper2" required="required" />
+            <label for="helper2">B.班主任</label></p>
+          <p><input type="radio" name="btn[31]" value="熟悉的任课老师" id="helper3" required="required" />
+            <label for="helper3">C.熟悉的任课老师</label></p>
+          <p><input type="radio" name="btn[31]" value="同学" id="helper4" required="required" />
+            <label for="helper4">D.同学</label></p>
+          <p><input type="radio" name="btn[31]" value="同乡" id="helper5" required="required" />
+            <label for="helper5">E.同乡</label></p>
+          <p><input type="radio" name="btn[31]" value="其他人员" id="helper6" required="required" />
+            <label for="helper6">F.其他人员</label></p>
+        </div>
+        <div class="radio">
+          <p>Q27:如果满分为10分，你对学校办学水平的总体评价是</p>
+          <p><input type="radio" name="btn[32]" value="9分及以上" id="level1" required="required" />
+            <label for="level1">A.9分及以上</label></p>
+          <p><input type="radio" name="btn[32]" value="7到9分之间" id="level2" required="required" />
+            <label for="level2">B.7到9分之间</label></p>
+          <p><input type="radio" name="btn[32]" value="6到7分之间" id="level3" required="required" />
+            <label for="level3">C.6到7分之间</label></p>
+          <p><input type="radio" name="btn[32]" value="6分以下" id="level4" required="required" />
+            <label for="level4">D.6分以下</label></p>
+        </div>
+        <h4>三、开放题</h4>
+        <div class="text">
+          <p>Q28：在长江大学就读期间,对你帮助最大的一位老师是：（请写明老师的单位和职务等）</p>
+          <textarea name="btn[33]"  maxlength="400"></textarea>
+        </div>
+        <div class="text">
+          <p>Q29：当前你面临的最大困扰是：</p>
+          <textarea name="btn[34]"  maxlength="400"></textarea>
+        </div>
+
+        <div class="text">
+          <p>Q30：毕业前你最想对校长说的一句话是：</p>
+          <textarea name="btn[35]"  maxlength="400"></textarea>
+        </div>
+        <input type="submit" value="提交" />
+      </form>
+    </div>
+  </div>
+  <script src="1.js"></script>
+</body>
+
+</html>
